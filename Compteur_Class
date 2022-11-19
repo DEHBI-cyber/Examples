@@ -1,0 +1,20 @@
+package exemples;
+
+public class Compteur 
+{
+	//la variable partagé
+  static int p=1;
+  
+	//la méthode de compte:
+  synchronized void compte(Thread t)
+  {
+    //chaque thread va incréménté p et afficher son nom.
+		
+    for(int i=1; i<=5 ; i++)
+    {
+      System.out.println( p++  + ":" + t.getName());
+    }
+      
+	}//fin 'sychronized method'
+
+}
